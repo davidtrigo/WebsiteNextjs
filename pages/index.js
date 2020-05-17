@@ -1,21 +1,27 @@
 import Head from 'next/head'
-
+import Link from 'next/link'
 export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Create Next App</title>
+        <title>ONCE</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+    
       <main>
         <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+        Bienvenido a la página de <a href="https://nextjs.org">ONCE</a>
         </h1>
 
+
         <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
+               
+          <Link href="/about"><a> <h3>About &rarr;</h3> 
+           <p>About this page</p></a></Link>
+           
+           </p>
+
+
 
         <div className="grid">
           <a href="https://nextjs.org/docs" className="card">
@@ -190,20 +196,6 @@ export default function Home() {
         }
       `}</style>
 
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
     </div>
   )
 }
