@@ -10,7 +10,7 @@ export default function Home() {
     
       <main>
         <h1 className="title">
-        Bienvenido a la página de <a href="https://nextjs.org">ONCE</a>
+        Bienvenido a la página de <a href="https://nextjs.org">TRECE</a>
         </h1>
 
 
