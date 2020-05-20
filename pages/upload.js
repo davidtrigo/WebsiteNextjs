@@ -13,14 +13,27 @@ export default function upload() {
         }
     };
 
+
+    const handleUpload = async e => {
+        e.preventDefault();
+        const formData = new FormData();
+        formData.append("image", image.raw);
+        await fetch("/api/upload", {
+          method: "POST",
+          body: formData
+        });
+      };
+
     return (
         <>
-             <label class="custom-file-upload">
-             <input type="file" 
-                    accept="image/*"
-                    onChange={handleChange}/> 
-                <img src={image.preview} alt="dummy" width="300" height="300" />
+ 
+             <label className="custom-file-upload">
+             <input type="file" accept="image/*" onChange={handleChange}/> 
+            <img src={image.preview} alt="image"width="300" height="300" /> 
             </label>
+            <br />
+            <button  onClick={handleUpload}>Upload Image</button>
+
             <style jsx>{
                 `
                 input[type="file"] {
