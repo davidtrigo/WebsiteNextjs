@@ -28,3 +28,15 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
+
+### Firebase ###
+.idea
+**/node_modules/*
+**/.firebaserc
+
+### Firebase Patch ###
+.runtimeconfig.json
+.firebase/
+firebase-debug.log
+
+
